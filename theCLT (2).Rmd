@@ -21,7 +21,7 @@ densityplot(my1000,main="original data")
 
 Describe the resulting plot -  is it unimodal?  How many peaks does it have?  Are all the peaks the same size? 
 
-  The plot is bi modal, has two peaks and one trough. The graph is a symmetrical sine wave, and thus, is symmetrical in data distribution. It appears that The data is split 50/50 beween the two halves of the graph
+    The plot is bi modal, has two peaks and one trough. The graph is a symmetrical sine wave, and thus, is symmetrical in data distribution. It appears that The data is split 50/50 beween the two halves of the graph
 
 Now take 2 random samples of 1000 points of the kkardashtemp variable and form 1000 points of their averages,
 
@@ -35,27 +35,27 @@ densityplot(x.avg,main="sample size 2")
 
 Describe the resulting plot -  is it unimodal?  How many peaks does it have?  Are all the peaks the same size? 
 
-  The graph is now trimodal, with the data distributed into three main clumps with little separations. The graph has three peaks and two troughs. The middle peak is larger than the other two, which are the same heights.
+    The graph is now trimodal, with the data distributed into three main clumps with little separations. The graph has three peaks and two troughs. The middle peak is larger than the other two, which are the same heights.
 
 Do this again for 4 random samples
 
-  The graph now seems to be unimodal, with evenly distributed data. There are five peaks, starting from low, doubling, then doubling in the middle, then mirroring that trend downwards on the latter haf of the data. 
+    The graph now seems to be unimodal, with evenly distributed data. There are five peaks, starting from low, doubling, then doubling in the middle, then mirroring that trend downwards on the latter haf of the data. 
 
 Then again for 9 random samples
 
-  The graph not has just two small peaks near the middle, with varying heights. The graph seems to remain unimodal, with more concentration of data in the middle and less towards the edges.
+    The graph not has just two small peaks near the middle, with varying heights. The graph seems to remain unimodal, with more concentration of data in the middle and less towards the edges.
 
 then 16 random samples
 
-  The graph now resembles a single peak of a sine wave, with slight deviations. The data is mainly concentrated in the middle again, and is unimodal. There is a bumpy section in the first half and a smooth linear decline towards the second half.
+    The graph now resembles a single peak of a sine wave, with slight deviations. The data is mainly concentrated in the middle again, and is unimodal. There is a bumpy section in the first half and a smooth linear decline towards the second half.
 
 finally for 36 random samples.
 
-  There are now two peaks, the highest of which appears in the first half of the data, and the lower in the second. The data is similarly distributed to the previous ones, and is unimodal. 
+    There are now two peaks, the highest of which appears in the first half of the data, and the lower in the second. The data is similarly distributed to the previous ones, and is unimodal. 
 
 Write a summary paragraph describing what you observed and how it relates to the central limit theorem.
 
-
+    I observed that as the sample size grew, the data began centralizing towards the middle and forming a single positive half of a sine wave. While the mean seemed to remain the same throughout the tests, the standard deviation began shrinking slightly.
 
 Be sure to comment on both the mean and standard deviation of the sample averages - the CLT makes a statement about what to expect from both.
 
