@@ -16,12 +16,13 @@ data("imagpop")
 KK_data <- imagpop$kkardashtemp
 my1000 <- sample(KK_data, size = 1000, replace=T)
 densityplot(my1000,main="original data")
-
+print(mean(KK_data))
+print(sd(KK_data))
 ```
 
 Describe the resulting plot -  is it unimodal?  How many peaks does it have?  Are all the peaks the same size? 
 
-    The plot is bi modal, has two peaks and one trough. The graph is a symmetrical sine wave, and thus, is symmetrical in data distribution. It appears that The data is split 50/50 beween the two halves of the graph
+    The plot is bi modal, has two peaks and one trough. The graph is a symmetrical sine wave, and thus, is symmetrical in data distribution. It appears that The data is split 50/50 beween the two halves of the graph. The mean is around 50 and the standard deviation is 41.75955.
 
 Now take 2 random samples of 1000 points of the kkardashtemp variable and form 1000 points of their averages,
 
@@ -31,11 +32,13 @@ Kdata   <- sample(KK_data, size = numb*1000, replace=T)
 mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
 densityplot(x.avg,main="sample size 2")
+print(mean(x.avg))
+print(sd(x.avg))
 ```
 
 Describe the resulting plot -  is it unimodal?  How many peaks does it have?  Are all the peaks the same size? 
 
-    The graph is now trimodal, with the data distributed into three main clumps with little separations. The graph has three peaks and two troughs. The middle peak is larger than the other two, which are the same heights.
+    The graph is now trimodal, with the data distributed into three main clumps with little separations. The graph has three peaks and two troughs. The middle peak is larger than the other two, which are the same heights. Mean = 52.0855, SD = 29.18388.
 
 Do this again for 4 random samples
 
@@ -45,8 +48,11 @@ Kdata   <- sample(KK_data, size = numb*1000, replace=T)
 mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
 densityplot(x.avg,main="sample size 4")
+print(mean(x.avg))
+print(sd(x.avg))
 ```
-    The graph now seems to be unimodal, with evenly distributed data. There are five peaks, starting from low, doubling, then doubling in the middle, then mirroring that trend downwards on the latter haf of the data. 
+     
+     The graph now seems to be unimodal, with evenly distributed data. There are five peaks, starting from low, doubling, then doubling in the middle, then mirroring that trend downwards on the latter haf of the data. Mean = 50.59125, SD = 20.63474 .
 
 Then again for 9 random samples
 
@@ -56,9 +62,11 @@ Kdata   <- sample(KK_data, size = numb*1000, replace=T)
 mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
 densityplot(x.avg,main="sample size 9")
+print(mean(x.avg))
+print(sd(x.avg))
 ```
 
-    The graph not has just two small peaks near the middle, with varying heights. The graph seems to remain unimodal, with more concentration of data in the middle and less towards the edges.
+    The graph not has just two small peaks near the middle, with varying heights. The graph seems to remain unimodal, with more concentration of data in the middle and less towards the edges. Mean = 50.32622, SD = 14.24162.
 
 then 16 random samples
 
@@ -68,9 +76,11 @@ Kdata   <- sample(KK_data, size = numb*1000, replace=T)
 mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
 densityplot(x.avg,main="sample size 16")
+print(mean(x.avg))
+print(sd(x.avg))
 ```
 
-    The graph now resembles a single peak of a sine wave, with slight deviations. The data is mainly concentrated in the middle again, and is unimodal. There is a bumpy section in the first half and a smooth linear decline towards the second half.
+    The graph now resembles a single peak of a sine wave, with slight deviations. The data is mainly concentrated in the middle again, and is unimodal. There is a bumpy section in the first half and a smooth linear decline towards the second half. Mean = 51.12588, SD = 10.33539.
 
 finally for 36 random samples.
 
@@ -80,13 +90,15 @@ Kdata   <- sample(KK_data, size = numb*1000, replace=T)
 mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
 densityplot(x.avg,main="sample size 36")
+print(mean(x.avg))
+print(sd(x.avg))
 ```
 
-    There are now two peaks, the highest of which appears in the first half of the data, and the lower in the second. The data is similarly distributed to the previous ones, and is unimodal. 
+    There are now two peaks, the highest of which appears in the first half of the data, and the lower in the second. The data is similarly distributed to the previous ones, and is unimodal. SD =  6.916966. Mean = 50.56125.
 
 Write a summary paragraph describing what you observed and how it relates to the central limit theorem.
 
-    I observed that as the sample size grew, the data began centralizing towards the middle and forming a single positive half of a sine wave. While the mean seemed to gradually normallize to mirror the actual data, and so did the standard deviation.
+    I observed that as the sample size grew, the data began centralizing towards the middle and forming a single positive half of a sine wave. While the mean seemed to gradually normallize to mirror the actual data and remained around 50, the standard deviation went from 41 to less than 7.
 
 Be sure to comment on both the mean and standard deviation of the sample averages - the CLT makes a statement about what to expect from both.
 
