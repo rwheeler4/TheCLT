@@ -44,9 +44,8 @@ numb = 4
 Kdata   <- sample(KK_data, size = numb*1000, replace=T)
 mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
-densityplot(x.avg,main="sample size 2")
+densityplot(x.avg,main="sample size 4")
 ```
-
     The graph now seems to be unimodal, with evenly distributed data. There are five peaks, starting from low, doubling, then doubling in the middle, then mirroring that trend downwards on the latter haf of the data. 
 
 Then again for 9 random samples
@@ -56,7 +55,7 @@ numb = 9
 Kdata   <- sample(KK_data, size = numb*1000, replace=T)
 mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
-densityplot(x.avg,main="sample size 2")
+densityplot(x.avg,main="sample size 9")
 ```
 
     The graph not has just two small peaks near the middle, with varying heights. The graph seems to remain unimodal, with more concentration of data in the middle and less towards the edges.
@@ -68,7 +67,7 @@ numb = 16
 Kdata   <- sample(KK_data, size = numb*1000, replace=T)
 mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
-densityplot(x.avg,main="sample size 2")
+densityplot(x.avg,main="sample size 16")
 ```
 
     The graph now resembles a single peak of a sine wave, with slight deviations. The data is mainly concentrated in the middle again, and is unimodal. There is a bumpy section in the first half and a smooth linear decline towards the second half.
@@ -80,7 +79,7 @@ numb = 36
 Kdata   <- sample(KK_data, size = numb*1000, replace=T)
 mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
-densityplot(x.avg,main="sample size 2")
+densityplot(x.avg,main="sample size 36")
 ```
 
     There are now two peaks, the highest of which appears in the first half of the data, and the lower in the second. The data is similarly distributed to the previous ones, and is unimodal. 
